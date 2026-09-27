@@ -64,8 +64,9 @@ function setTheme(isDark) {
   refreshIcons();
 }
 
-// The soft pink light theme is the default; dark mode is opt-in via the toggle.
-setTheme(readStoredTheme() === "dark");
+const savedTheme = readStoredTheme();
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+setTheme(savedTheme ? savedTheme === "dark" : prefersDark);
 
 themeToggle?.addEventListener("click", () => {
   setTheme(!document.body.classList.contains("dark"));
