@@ -18,6 +18,7 @@ const skillPrev = document.querySelector(".skill-prev");
 const skillNext = document.querySelector(".skill-next");
 const skillCurrent = document.querySelector(".skill-current");
 const skillCurrentLabel = document.querySelector(".skill-current-label");
+const skillTotal = document.querySelector(".skill-total");
 const skillProgress = document.querySelector(".skill-progress span");
 const certificateButtons = [...document.querySelectorAll(".certificate-image-button")];
 const certificateDialog = document.querySelector(".certificate-dialog");
@@ -29,6 +30,7 @@ let activeSpotlight = 0;
 let spotlightTimer;
 let activeSkill = 0;
 let skillTimer;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -38,9 +40,21 @@ function refreshIcons() {
   window.lucide?.createIcons();
 }
 
+function readStoredTheme() {
+  try {
+    return localStorage.getItem("portfolio-theme");
+  } catch {
+    return null;
+  }
+}
+
 function setTheme(isDark) {
   document.body.classList.toggle("dark", isDark);
-  localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
+  try {
+    localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
+  } catch {
+    // Storage can be unavailable in private browsing; the theme still applies for this visit.
+  }
 
   if (themeToggle) {
     themeToggle.innerHTML = `<i data-lucide="${isDark ? "sun" : "moon"}"></i>`;
@@ -50,7 +64,7 @@ function setTheme(isDark) {
   refreshIcons();
 }
 
-const savedTheme = localStorage.getItem("portfolio-theme");
+const savedTheme = readStoredTheme();
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 setTheme(savedTheme ? savedTheme === "dark" : prefersDark);
 
@@ -96,6 +110,7 @@ function showSpotlight(index) {
 
 function startSpotlightTimer() {
   window.clearInterval(spotlightTimer);
+  if (prefersReducedMotion) return;
   spotlightTimer = window.setInterval(() => showSpotlight(activeSpotlight + 1), 6000);
 }
 
@@ -153,12 +168,14 @@ function showSkillSlide(index) {
   });
 
   if (skillCurrent) skillCurrent.textContent = String(activeSkill + 1).padStart(2, "0");
+  if (skillTotal) skillTotal.textContent = `/ ${String(skillSlides.length).padStart(2, "0")}`;
   if (skillCurrentLabel) skillCurrentLabel.textContent = skillSlides[activeSkill].dataset.label || "Skills";
   if (skillProgress) skillProgress.style.width = `${((activeSkill + 1) / skillSlides.length) * 100}%`;
 }
 
 function startSkillTimer() {
   window.clearInterval(skillTimer);
+  if (prefersReducedMotion) return;
   skillTimer = window.setInterval(() => showSkillSlide(activeSkill + 1), 4800);
 }
 

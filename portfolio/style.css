@@ -780,7 +780,8 @@ p {
   --role-color: #1d4ed8;
 }
 
-.role-ml {
+.role-ml,
+.role-data {
   --role-color: #b7791f;
 }
 
@@ -1381,6 +1382,15 @@ p {
   display: grid;
   grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
   gap: 16px;
+}
+
+.achievement-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.achievement-stack .achievement-primary {
+  min-height: 0;
 }
 
 .achievement-primary {
