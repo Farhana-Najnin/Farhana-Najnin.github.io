@@ -1393,6 +1393,24 @@ p {
   min-height: 0;
 }
 
+.achievement-with-photo {
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.certificate-image-button.achievement-photo {
+  width: calc(100% + 64px);
+  height: 300px;
+  margin: -32px -32px 26px;
+  background: #0b2730;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.certificate-image-button.achievement-photo img {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
 .achievement-primary {
   display: flex;
   min-height: 410px;
@@ -2275,6 +2293,12 @@ body:not(.dark) .cursor-glow.is-visible {
   .achievement-primary {
     min-height: 360px;
     padding: 24px;
+  }
+
+  .certificate-image-button.achievement-photo {
+    width: calc(100% + 48px);
+    height: 220px;
+    margin: -24px -24px 22px;
   }
 
   .contact-links a {
