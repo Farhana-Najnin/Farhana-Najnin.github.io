@@ -7,7 +7,7 @@
       name="description"
       content="Portfolio of Farhana Najnin Mahi, Machine Learning Engineer Intern, Research Intern, IT Automation Intern, and CSE graduate building practical AI, automation, analytics, and software solutions."
     />
-    <meta name="theme-color" content="#081d25" />
+    <meta name="theme-color" content="#fff5f8" />
     <title>Farhana Najnin Mahi | AI, Automation & Research Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -96,7 +96,7 @@
         <div class="hero-metrics" aria-label="Career highlights">
           <div><strong>3</strong><span>Current internships</span></div>
           <div><strong>1</strong><span>IEEE publication</span></div>
-          <div><strong>7+</strong><span>Portfolio projects</span></div>
+          <div><strong>7</strong><span>Portfolio projects</span></div>
           <div><strong>6th</strong><span>RSBRU Summit 2026</span></div>
         </div>
       </section>
@@ -216,7 +216,7 @@
         <div class="experience-list reveal">
           <article class="experience-item role-automation">
             <div class="experience-date">
-              <span>23 Jun 2026</span>
+              <span>Jun 2026</span>
               <strong>Present</strong>
             </div>
             <div class="experience-content">
@@ -310,12 +310,15 @@
             </div>
           </article>
 
-          <article class="project-card" data-category="rag nlp ml web">
+          <article class="project-card" data-category="nlp ml web">
             <div class="project-number">02</div>
             <span class="project-type">Clinical RAG</span>
             <h3>ClinReasoner</h3>
             <p>Guideline-grounded clinical decision agent using PDF processing, FAISS retrieval, risk rules, and citation-backed recommendations.</p>
-            <p class="project-stack">RAG / FAISS / Sentence-Transformers / Streamlit</p>
+            <p class="project-stack">RAG / FAISS / PyMuPDF / Sentence-Transformers / Streamlit</p>
+            <div class="project-actions">
+              <a href="https://github.com/Farhana-Najnin/-ClinReasoner" target="_blank" rel="noreferrer">GitHub <i data-lucide="github"></i></a>
+            </div>
           </article>
 
           <article class="project-card" data-category="ml data web">
@@ -365,11 +368,12 @@
           <article class="project-card" data-category="ml data web">
             <div class="project-number">07</div>
             <span class="project-type">Forecasting</span>
-            <h3>Uncertainty-Aware Demand Forecaster</h3>
-            <p>Store-level P50/P90 forecasting with inventory simulation and comparison of ordering strategies using error and cost metrics.</p>
+            <h3>Uncertainty-Aware Retail Demand Forecaster</h3>
+            <p>Store-level P50/P90 forecasting with inventory simulation and comparison of ordering strategies using MAE and cost-based metrics.</p>
             <p class="project-stack">Prophet / Streamlit / Scikit-learn / Python</p>
             <div class="project-actions">
-              <a href="https://github.com/Farhana-Najnin/Uncertainty-Aware-Demand-Forecaster" target="_blank" rel="noreferrer">GitHub <i data-lucide="github"></i></a>
+              <a href="https://github.com/Farhana-Najnin/Retail-Demand-Forecaster" target="_blank" rel="noreferrer">Retail repo <i data-lucide="github"></i></a>
+              <a href="https://github.com/Farhana-Najnin/Uncertainty-Aware-Demand-Forecaster" target="_blank" rel="noreferrer">Uncertainty repo <i data-lucide="github"></i></a>
             </div>
           </article>
         </div>
@@ -382,7 +386,7 @@
         </div>
 
         <article class="publication-feature reveal">
-          <div class="publication-index">IEEE / 2026</div>
+          <div class="publication-index">IEEE QPAIN / 2026</div>
           <div class="publication-content">
             <span>Published research</span>
             <h3>Big Data Analysis for Forest Cover Prediction with PySpark</h3>
@@ -390,6 +394,10 @@
               Large-scale forest cover prediction using PySpark distributed ML,
               SMOTE, feature engineering, Logistic Regression, Random Forest, SVM,
               MLP, and CatBoost.
+            </p>
+            <p class="publication-meta">
+              IEEE QPAIN 2026, Chittagong, Bangladesh. Co-authors: Meherunnesa Hossain Ibnath,
+              Sadia Sabrin Neha, Nusrat Jahan.
             </p>
             <div class="publication-result">
               <strong>96.18%</strong>
@@ -405,19 +413,19 @@
           <article>
             <span>Bengali NLP</span>
             <h3>Sentiment Analysis of Bengali Movie Reviews</h3>
-            <p>Fine-tuned BanglaBERT, mBERT, XLM-R, and Gemini with LoRA/PEFT on 11k+ labeled reviews.</p>
+            <p>Fine-tuned BanglaBERT, mBERT, XLM-R, and Gemini with LoRA/PEFT on 11k+ labeled reviews; BanglaBERT outperformed every compared transformer.</p>
             <strong>97.16% accuracy / 95.04% F1-score</strong>
           </article>
           <article>
             <span>Academic thesis</span>
             <h3>Bilingual Healthcare Chatbot</h3>
-            <p>Bengali-English symptom-based disease prediction and specialist recommendation using transformer and ML models.</p>
+            <p>Bengali-English symptom-based disease prediction and specialist recommendation using XLM-RoBERTa, BanglaBERT, mBERT, Random Forest, SVM, and XGBoost on a curated multilingual medical dataset.</p>
             <strong>Healthcare NLP / rule-based risk control</strong>
           </article>
           <article id="research-achievement">
             <span>Research recognition</span>
             <h3>Explainable Pneumonia Detection</h3>
-            <p>Deep learning and Grad-CAM presentation at the RSBRU International Research Summit 2026.</p>
+            <p>Explainable pneumonia detection from chest X-rays with deep learning and Grad-CAM, presented at the RSBRU International Research Summit 2026, Begum Rokeya University.</p>
             <strong>6th place</strong>
           </article>
         </div>
@@ -433,7 +441,7 @@
           <div class="skill-carousel-toolbar">
             <div class="skill-carousel-status" aria-live="polite">
               <strong class="skill-current">01</strong>
-              <span>/ 06</span>
+              <span class="skill-total">/ 07</span>
               <p class="skill-current-label">AI & Machine Learning</p>
             </div>
             <div class="skill-carousel-controls" aria-label="Skill slider controls">
@@ -458,10 +466,15 @@
               <h3>Literature review, transformer experiments, and reproducible reporting</h3>
               <div class="skill-list"><span>LLM/NLP</span><span>RAG</span><span>BanglaBERT</span><span>XLM-RoBERTa</span><span>mBERT</span><span>LoRA/PEFT</span><span>Paper Analysis</span><span>Experiment Documentation</span></div>
             </article>
+            <article class="skill-panel" data-panel="languages" data-label="Languages & Databases" aria-hidden="true">
+              <p>Languages & databases</p>
+              <h3>Programming foundations used across coursework, research, and products</h3>
+              <div class="skill-list"><span>Python</span><span>SQL</span><span>C</span><span>C++</span><span>JavaScript</span><span>PHP</span><span>PostgreSQL</span><span>MySQL</span></div>
+            </article>
             <article class="skill-panel" data-panel="backend" data-label="Backend & Frameworks" aria-hidden="true">
               <p>Backend & frameworks</p>
               <h3>APIs and application layers that connect models to users</h3>
-              <div class="skill-list"><span>Python</span><span>FastAPI</span><span>Django</span><span>Streamlit</span><span>REST API Design</span><span>Uvicorn</span><span>PostgreSQL</span><span>MySQL</span></div>
+              <div class="skill-list"><span>FastAPI</span><span>Django (MTV/ORM)</span><span>Streamlit</span><span>REST API Design</span><span>Uvicorn</span><span>Swagger UI</span><span>Bootstrap</span></div>
             </article>
             <article class="skill-panel" data-panel="data" data-label="Data & Analytics" aria-hidden="true">
               <p>Data & analytics</p>
@@ -486,6 +499,7 @@
             <div class="skill-dots" aria-label="Choose skill category">
               <button class="active" type="button" aria-label="Show AI and Machine Learning skills"></button>
               <button type="button" aria-label="Show Research and NLP skills"></button>
+              <button type="button" aria-label="Show Languages and Databases"></button>
               <button type="button" aria-label="Show Backend skills"></button>
               <button type="button" aria-label="Show Data and Analytics skills"></button>
               <button type="button" aria-label="Show Automation skills"></button>
@@ -529,14 +543,18 @@
             <span>Research achievement</span>
             <strong>6th Place</strong>
             <h3>RSBRU International Research Summit 2026</h3>
-            <p>Presented explainable pneumonia detection from chest X-ray images using deep learning and Grad-CAM.</p>
+            <p>Presented "Explainable Pneumonia Detection from Chest X-Ray Images Using Deep Learning and Grad-CAM" at Begum Rokeya University, Bangladesh.</p>
           </article>
 
           <div class="credential-list">
-            <article><span>Leadership</span><h3>Campus Ambassador</h3><p>ICT Olympiad Bangladesh, 2022</p></article>
-            <article><span>Certification</span><h3>Microsoft Azure AI Fundamentals</h3><p>AI-900</p></article>
+            <article><span>Leadership</span><h3>Campus Ambassador</h3><p>ICT Olympiad Bangladesh, 2022 - represented AUST</p></article>
+            <article><span>Certification</span><h3>Machine Learning Specialization</h3><p>Andrew Ng - Coursera</p></article>
+            <article><span>Certification</span><h3>Microsoft Azure AI Fundamentals</h3><p>AI-900 - Microsoft</p></article>
             <article><span>Certification</span><h3>AI+ Prompt Engineer Level 1</h3><p>AI CERTs</p></article>
-            <article><span>Training</span><h3>Generative AI and Image Generation</h3><p>Google Cloud</p></article>
+            <article><span>Certification</span><h3>Google Certified Educator: Level 1</h3><p>Google for Education</p></article>
+            <article><span>Training</span><h3>Introduction to Generative AI and Image Generation</h3><p>Google Cloud</p></article>
+            <article><span>Training</span><h3>Student Ambassador Technical Training Program</h3><p>Microsoft</p></article>
+            <article><span>Workshop</span><h3>AWS, CNCF and GitHub</h3><p>AUSTPIC - Aug 2025</p></article>
           </div>
         </div>
 
